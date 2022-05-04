@@ -1,4 +1,5 @@
 from django.views.generic import TemplateView
+from datetime import datetime
 
 class ContactsView(TemplateView):
     template_name = 'mainapp/contacts.html'
@@ -17,3 +18,31 @@ class LoginView(TemplateView):
 
 class NewsView(TemplateView):
     template_name = 'mainapp/news.html'
+
+    def get_context_data(self, **kwargs):
+        context =  super().get_context_data(**kwargs)
+        context['object_list'] = [
+            {
+                'title': 'Интервью с успешным студентом',
+                'preview': 'ОБМАН',
+                'date': datetime.now(),
+            },    {
+                'title': 'Высокое качество обучения',
+                'preview': 'ЛОЖЬ',
+                'date': datetime.now(),
+            },    {
+                'title': 'Гарантия трудоустройства',
+                'preview': 'ВРАНЬЁ',
+                'date': datetime.now(),
+            },    {
+                'title': 'Программа для новичков',
+                'preview': 'ЧЕПУХА',
+                'date': datetime.now(),
+            },    {
+                'title': 'ИНТЕНСИВ В ПАВЛОМ ВОЛЕЙ',
+                'preview': 'БРЕД',
+                'date': datetime.now(),
+            },
+        ]
+
+        return context
