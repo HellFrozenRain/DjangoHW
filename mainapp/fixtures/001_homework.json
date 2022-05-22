@@ -1,0 +1,28 @@
+[
+    {
+        "model": "mainapp.news",
+        "pk": 1,
+        "fields": {
+            "title": "What the hell",
+            "preamble": "What am i doing?",
+            "body": "No idea",
+            "body_as_markdown": false,
+            "created": "2022-05-22T12:01:02.989Z",
+            "updated": "2022-05-22T12:01:02.989Z",
+            "deleted": false
+        }
+    },
+    {
+        "model": "mainapp.news",
+        "pk": 2,
+        "fields": {
+            "title": "News from homework",
+            "preamble": "shock content?",
+            "body": "who am i? where am i? what is going on in this program?",
+            "body_as_markdown": false,
+            "created": "2022-05-22T12:05:12.454Z",
+            "updated": "2022-05-22T12:05:12.454Z",
+            "deleted": false
+        }
+    }
+]
