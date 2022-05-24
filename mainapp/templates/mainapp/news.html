@@ -6,12 +6,12 @@
 
   <div class="col-lg-8">
     
-    {% for item in object_list %}
+    {% for item in news_query_set %}
     <div class="card my-2">
       <div class="card-body">
         <h5 class="card-title">{{ item.title }}</h5>
-        <h6 class="card-subtitle mb-2 text-muted">{{ item.date |date:'d-m-Y H-m-s' }}</h6>
-        <p class="card-text">{{ item.preview }}</p>
+        <h6 class="card-subtitle mb-2 text-muted">{{ item.created|date:'d-m-Y H-m-s' }}</h6>
+        <p class="card-text">{{ item.preamble }}</p>
         <a href="#" class="card-link">Подробнее</a>
       </div>
     </div>
