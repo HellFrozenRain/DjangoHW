@@ -1,3 +1,5 @@
+{% load static %}
+
 <!doctype html>
 <html lang="ru">
 
@@ -7,20 +9,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 
     <!-- ChartJS -->
-    <link rel="stylesheet" href="/static/css/Chart.min.css">
+    <link rel="stylesheet" href="{% static 'css/Chart.min.css' %}">
 
     <!-- FontAwesome -->
-    <link rel="stylesheet" href="/static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="{% static 'css/fontawesome.all.min.css' %}">
 
+    
     <title>Welcome to Braniac!</title>
 </head>
 
 <body>
 
 {% include 'includes/main_menu.html' %}
+
+{% block messages %}
+{% include 'includes/messages.html' %}
+{% endblock messages %}
 
     <div class="container-md">
 
@@ -29,9 +36,6 @@
         {% endblock content%}
   
     </div>
-
-
-
 
 
     <!-- Footer -->
@@ -47,7 +51,12 @@
                 <ul class="list-unstyled">
                     <li><a href="{% url 'mainapp:index' %}">Домашняя</a></li>
                     <li><a href="{% url 'mainapp:news' %}">Новости</a></li>
-                    <li><a href="{% url 'mainapp:login' %}">Войти</a></li>
+                    {% if user.is_authenticated %}
+                    <li><a href="{% url 'authapp:logout' %}">Выйти</a></li>
+                    {% else %}
+                    
+                    <li><a href="{% url 'authapp:login' %}">Войти</a></li>
+                    {% endif %}
                 </ul>
                 </p>
             </div>
@@ -102,17 +111,27 @@
 
     <!-- JavaScript section -->
     <!-- Bootstrap -->
-    <script src="/static/js/jquery-3.6.0.min.js"></script>
-    <script src="/static/js/popper.min.js"></script>
-    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
 
     <!-- ChartJs -->
-    <script src="/static/js/Chart.min.js"></script>
+    <script src="{% static 'js/Chart.min.js' %}"></script>
 
     <!-- FontAwesome -->
-    <script src="/static/js/fontawesome.all.min.js"></script>
+    <script src="{% static 'js/fontawesome.all.min.js' %}"></script>
 
-
+    {% block js %}
+    <script>
+        $(document).ready(function () {
+        {% if messages %} 
+        // Toasts
+        $(".toast").toast({ delay: 5000 });
+        $(".toast").toast("show");
+        {% endif %}
+        });
+    </script>
+    {% endblock js %}
 
 </body>
 
