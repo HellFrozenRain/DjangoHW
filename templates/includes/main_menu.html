@@ -3,7 +3,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
         <a class="navbar-brand" href="{% url 'mainapp:index' %}">
-            <img src="{% static 'img/logo.png' %]" alt="">
+            <img src="{% static 'img/logo.png' %}" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,11 +25,14 @@
                         Профиль
                     </a>
                     <div class="dropdown-menu" aria-labelledby="ddProfile">
-                        <a class="dropdown-item" href="{% url 'authapp:profile_edit' %}">Редактировать профиль</a>
+                        <a class="dropdown-item" href="{% url 'authapp:profile_edit' pk=request.user.pk %}">Редактировать профиль</a>
                         <a class="dropdown-item" href="#">Мои курсы</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Модерация</a>
-                        <a class="dropdown-item" href="#">Административный раздел</a> 
+                        {% if user.is_superuser %}
+                        <a class="dropdown-item" href="{% url 'admin:index' %}" 
+                        target="_blank">Административный раздел</a> 
+                        {% endif %}
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="{% url 'authapp:logout' %}">Выход</a>
                     </div>
