@@ -24,5 +24,18 @@
             "updated": "2022-05-22T12:05:12.454Z",
             "deleted": false
         }
+    },
+    {    "model": "mainapp.news",
+        "pk": 3,
+        "fields": {
+            "title": "ВСЁ ПРОПАЛО",
+            "preamble": "Шеф ВСЕ ПРОПАЛО",
+            "body": "могло быть и хуже",
+            "body_as_markdown": false,
+            "created": "2022-05-31T12:05:12.454Z",
+            "updated": "2022-05-31T12:05:12.454Z",
+            "deleted": false
+        }
     }
+    
 ]
