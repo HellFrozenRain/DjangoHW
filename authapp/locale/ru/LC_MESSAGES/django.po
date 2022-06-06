@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-06 20:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: authapp/forms.py:59
+msgid "Please, enter a valid age!"
+msgstr ""
+
+#: authapp/models.py:26
+msgid "username"
+msgstr "пользователь"
+
+#: authapp/models.py:29
+msgid "Да напиши уже что-нибудь"
+msgstr ""
+
+#: authapp/models.py:31
+msgid "A user with that username already exists."
+msgstr "Уже есть"
+
+#: authapp/models.py:34
+msgid "first name"
+msgstr "первое имя"
+
+#: authapp/models.py:35
+msgid "last name"
+msgstr "последнее имя"
+
+#: authapp/models.py:39
+msgid "email address"
+msgstr "адрес почты"
+
+#: authapp/models.py:43
+msgid "A user with that email address already exists."
+msgstr "Уже есть"
+
+#: authapp/models.py:47
+msgid "staff status"
+msgstr "статус персонала"
+
+#: authapp/models.py:49
+msgid "Designates whether the user can log into this admin site."
+msgstr ""
+
+#: authapp/models.py:52
+msgid "active"
+msgstr "активный"
+
+#: authapp/models.py:55
+msgid ""
+"Designates whether this user should be treated as active.             "
+"Unselect this instead of deleting accounts."
+msgstr ""
+
+#: authapp/models.py:59
+msgid "date joined"
+msgstr "дата присоединения"
+
+#: authapp/models.py:68
+msgid "user"
+msgstr "пользователь"
+
+#: authapp/models.py:69
+msgid "users"
+msgstr "пользователи"
+
+#: authapp/views.py:22
+#, fuzzy, python-format
+#| msgid "Оставь надежду всяк сюда входящий"
+msgid "Оставь надежду всяк сюда входящий<br>Hi, %(username)s"
+msgstr "включи и молись"
+
+#: authapp/views.py:43
+msgid "Вали!"
+msgstr "Гет аут"
