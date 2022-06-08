@@ -1,0 +1,22 @@
+[
+    {
+        "model": "authapp.customuser",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$320000$MRVyzif44WzINzzCDHAWwE$IwquoIFeWbNY0c75u8iHabXjviwSFp4cv21RT2fKrk0=",
+            "last_login": "2022-06-06T18:35:04.323Z",
+            "is_superuser": true,
+            "username": "django",
+            "first_name": "",
+            "last_name": "",
+            "age": null,
+            "avatar": "",
+            "email": "django@django.ru",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2022-05-30T15:42:26.013Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    }
+]
