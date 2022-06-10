@@ -30,7 +30,7 @@ DEBUG = True if os.getenv('DEBUG')=='True' else False
 
 ALLOWED_HOSTS = ["*"]
 
-ENV_TYPE = os.hetenv('ENV_TYPE', 'prod')
+ENV_TYPE = os.getenv('ENV_TYPE', 'prod')
 
 # if DEBUG:
 #     INTERNAL_IPS = ["127.0.0.1",]
